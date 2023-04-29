@@ -30,7 +30,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "*"]
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "*", '.vercel.app', '.now.sh']
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
@@ -126,3 +126,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = [BASE_DIR/'static', ]
+STATIC_ROOT = BASE_DIR/'staticfiles'
